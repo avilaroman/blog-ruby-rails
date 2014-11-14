@@ -9,7 +9,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 group :production do
-  gem 'pg'
+  gem 'pg', '0.18.0.pre20141017160319'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
