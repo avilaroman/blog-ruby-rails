@@ -6,15 +6,19 @@ class ArticlesController < ApplicationController
 	def create
 		@article = Article.new(article_params)
 
-		@article.save
+		if @article.save then
+			print 'Articulo guardado'
+		else
+			print 'Articulo con errores al guardar'
+		end
 		#redirect_to @article
 
 		render plain: params[:article].inspect
 	end
 
 	def show
-		@article = :Article.find(params[:id])
-
+		println 'Ingreso a show'
+		@article = Article.find(params[:id])
 	end
 
 	def index
